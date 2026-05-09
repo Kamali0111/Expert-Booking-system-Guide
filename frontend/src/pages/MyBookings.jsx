@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { bookingService } from '../services/api';
 import { Header, Footer } from '../components/Layout';
-import { Card, LoadingSpinner, ErrorMessage, EmptyState, Badge, InputField, Button } from '../components/Common';
+import { LoadingSpinner, ErrorMessage, EmptyState, InputField, Button } from '../components/Common';
 
 const STATUS_VARIANTS = {
   Pending: 'warning',

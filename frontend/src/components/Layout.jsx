@@ -2,6 +2,8 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
+/* ================= HEADER ================= */
+
 export function Header() {
   const location = useLocation();
 
@@ -21,7 +23,6 @@ export function Header() {
           flex justify-between items-center
         "
       >
-
         {/* LOGO */}
 
         <Link to="/">
@@ -39,15 +40,14 @@ export function Header() {
           </h1>
         </Link>
 
-        {/* NAVIGATION */}
+        {/* NAV */}
 
-        <nav className="flex items-center gap-4 md:gap-6">
+        <nav className="flex items-center gap-6">
 
           <Link
             to="/"
             className={`
-              font-medium
-              transition-all
+              font-medium transition-all
 
               ${
                 location.pathname === "/"
@@ -62,8 +62,7 @@ export function Header() {
           <Link
             to="/my-bookings"
             className={`
-              font-medium
-              transition-all
+              font-medium transition-all
 
               ${
                 location.pathname === "/my-bookings"
@@ -74,8 +73,6 @@ export function Header() {
           >
             My Bookings
           </Link>
-
-          {/* CTA */}
 
           <Link
             to="/"
@@ -101,7 +98,7 @@ export function Header() {
   );
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 export function Footer() {
   return (
@@ -123,9 +120,6 @@ export function Footer() {
           gap-4
         "
       >
-
-        {/* BRAND */}
-
         <h2
           className="
             text-2xl font-bold
@@ -139,8 +133,6 @@ export function Footer() {
           ExpertBook
         </h2>
 
-        {/* TEXT */}
-
         <p className="text-gray-500 text-sm text-center">
           © 2026 ExpertBook — Real-Time Expert Booking Platform
         </p>
@@ -149,7 +141,7 @@ export function Footer() {
   );
 }
 
-/* PAGINATION */
+/* ================= PAGINATION ================= */
 
 export function Pagination({
   currentPage,
@@ -159,10 +151,8 @@ export function Pagination({
   if (totalPages <= 1) return null;
 
   return (
-    <div className="
-      flex justify-center
-      flex-wrap gap-3
-    ">
+    <div className="flex justify-center flex-wrap gap-3">
+
       {Array.from(
         { length: totalPages },
         (_, i) => i + 1
@@ -191,3 +181,4 @@ export function Pagination({
     </div>
   );
 }
+
