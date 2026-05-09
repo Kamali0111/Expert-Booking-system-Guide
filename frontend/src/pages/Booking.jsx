@@ -3,7 +3,7 @@ import { useSearchParams, useParams, useNavigate } from 'react-router-dom';
 import { bookingService, expertService } from '../services/api';
 import { emitSlotBooked } from '../services/socket';
 import { Header, Footer } from '../components/Layout';
-import { Card, InputField, TextArea, Button, LoadingSpinner, ErrorMessage } from '../components/Common';
+import { InputField, TextArea, Button, LoadingSpinner, ErrorMessage } from '../components/Common';
 import toast from 'react-hot-toast';
 
 export default function Booking() {
